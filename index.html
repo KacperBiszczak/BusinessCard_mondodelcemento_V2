@@ -5,12 +5,47 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mondo Del Cemento - Mikrocement i powierzchnie bezspoinowe</title>
 <meta name="description" content="Bezspoinowe posadzki mikrocementowe i żywiczne. Realizacje mieszkań, domów, showroomów i lokali usługowych. Bezpłatny pomiar i wycena.">
+<link rel="canonical" href="https://twojafirma.pl/">
+<meta name="theme-color" content="#221F1C">
+
+<!-- Open Graph / social preview — podmień og:url i dodaj og:image (1200×630) po wdrożeniu -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="Nazwa Firmy">
+<meta property="og:title" content="Nazwa Firmy — Mikrocement i posadzki żywiczne">
+<meta property="og:description" content="Bezspoinowe posadzki mikrocementowe i żywiczne. Realizacje mieszkań, domów, showroomów i lokali usługowych. Bezpłatny pomiar i wycena.">
+<meta property="og:url" content="https://twojafirma.pl/">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
+
+<!-- Dane strukturalne (SEO lokalne) — uzupełnij prawdziwymi danymi przed publikacją -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Nazwa Firmy",
+  "description": "Bezspoinowe posadzki mikrocementowe i żywiczne — mieszkania, domy, showroomy i lokale usługowe.",
+  "url": "https://twojafirma.pl/",
+  "telephone": "+48000000000",
+  "email": "kontakt@twojafirma.pl",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Przykładowa 1",
+    "postalCode": "00-000",
+    "addressLocality": "Miasto",
+    "addressCountry": "PL"
+  },
+  "areaServed": "PL",
+  "openingHours": "Mo-Fr 08:00-16:00"
+}
+</script>
 </head>
 <body>
 
@@ -18,6 +53,7 @@
 
 <!-- ================= NAV ================= -->
 <header class="nav" id="nav">
+  <div class="nav__backdrop" id="navBackdrop"></div>
   <div class="container nav__inner">
     <a href="#main" class="logo-slot" aria-label="Strona główna">
       <img src="img/logo.svg" alt="Nazwa Firmy" class="logo-slot__img">
@@ -32,6 +68,7 @@
       <a href="#proces">Proces</a>
       <a href="#faq">FAQ</a>
       <a href="#kontakt">Kontakt</a>
+      <a href="#kontakt" class="btn btn-primary nav-mobile-cta">Bezpłatna wycena</a>
     </nav>
 
     <div class="nav__cta">
@@ -55,7 +92,7 @@
         <div class="hero__cta">
           <a href="#kontakt" class="btn btn-primary">
             Umów bezpłatny pomiar
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
           <a href="#powierzchnie" class="btn btn-ghost">Zobacz realizacje</a>
         </div>
@@ -76,48 +113,39 @@
         </div>
       </div>
 
-      <div class="layer-diagram" aria-label="Schemat warstw posadzki mikrocementowej">
-        <svg viewBox="0 0 420 400" xmlns="http://www.w3.org/2000/svg">
-          <!-- podłoże -->
-          <rect class="layer-band" x="40" y="300" width="260" height="46" rx="2" fill="#8F8676"/>
-          <!-- grunt -->
-          <rect class="layer-band" x="40" y="256" width="260" height="20" rx="2" fill="#B4AB9B"/>
-          <!-- warstwa bazowa -->
-          <rect class="layer-band" x="40" y="214" width="260" height="26" rx="2" fill="#D9AE72"/>
-          <!-- mikrocement finiszowy -->
-          <rect class="layer-band" x="40" y="184" width="260" height="16" rx="2" fill="#B4813F"/>
-          <!-- powłoka ochronna -->
-          <rect class="layer-band" x="40" y="172" width="260" height="8" rx="2" fill="#2A2723"/>
+      <div class="hero-visual">
+        <div class="hero-visual__photo">
+          ZDJĘCIE REALIZACJI<br>(np. gotowa posadzka)
+        </div>
 
-          <!-- numery warstw -->
-          <text class="layer-num" x="52" y="327" fill="#FAF8F4">01</text>
-          <text class="layer-num" x="52" y="270" fill="#2A2723">02</text>
-          <text class="layer-num" x="52" y="231" fill="#2A2723">03</text>
-          <text class="layer-num" x="52" y="196" fill="#FAF8F4">04</text>
+        <div class="layer-diagram">
+          <svg aria-hidden="true" focusable="false" viewBox="0 60 300 110" xmlns="http://www.w3.org/2000/svg">
+            <!-- podłoże -->
+            <rect class="layer-band" x="12" y="132" width="276" height="28" rx="2" fill="#8F8676"/>
+            <!-- grunt -->
+            <rect class="layer-band" x="12" y="114" width="276" height="14" rx="2" fill="#B4AB9B"/>
+            <!-- warstwa bazowa -->
+            <rect class="layer-band" x="12" y="90" width="276" height="20" rx="2" fill="#D9AE72"/>
+            <!-- mikrocement finiszowy -->
+            <rect class="layer-band" x="12" y="74" width="276" height="12" rx="2" fill="#B4813F"/>
+            <!-- powłoka ochronna -->
+            <rect class="layer-band" x="12" y="66" width="276" height="6" rx="2" fill="#2A2723"/>
 
-          <!-- linie odnośników + etykiety -->
-          <line x1="300" y1="323" x2="330" y2="323" stroke="#B4AB9B" stroke-width="1"/>
-          <text class="layer-label" x="334" y="327">01 - Podłoże (beton / jastrych)</text>
+            <!-- numery warstw -->
+            <text class="layer-num" x="26" y="150" fill="#FAF8F4">01</text>
+            <text class="layer-num" x="26" y="125" fill="#2A2723">02</text>
+            <text class="layer-num" x="26" y="104" fill="#2A2723">03</text>
+            <text class="layer-num" x="26" y="83" fill="#FAF8F4">04</text>
+          </svg>
 
-          <line x1="300" y1="266" x2="330" y2="266" stroke="#B4AB9B" stroke-width="1"/>
-          <text class="layer-label" x="334" y="270">02 - Grunt / primer</text>
-
-          <line x1="300" y1="227" x2="330" y2="227" stroke="#B4AB9B" stroke-width="1"/>
-          <text class="layer-label" x="334" y="231">03 - Warstwa bazowa</text>
-
-          <line x1="300" y1="192" x2="330" y2="192" stroke="#B4AB9B" stroke-width="1"/>
-          <text class="layer-label" x="334" y="196">04 - Mikrocement finiszowy</text>
-
-          <line x1="300" y1="176" x2="330" y2="176" stroke="#B4AB9B" stroke-width="1"/>
-          <text class="layer-label" x="334" y="180">05 - Powłoka ochronna UV</text>
-
-          <!-- miejsce na zdjęcie realizacji -->
-          <foreignObject x="40" y="20" width="260" height="140">
-            <div xmlns="http://www.w3.org/1999/xhtml" class="photo-slot" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:#8F8676;text-align:center;padding:12px;box-sizing:border-box;">
-              ZDJĘCIE REALIZACJI<br>(np. gotowa posadzka)
-            </div>
-          </foreignObject>
-        </svg>
+          <ol class="layer-legend">
+            <li><span class="layer-legend__num">01</span> Podłoże <em>(beton / jastrych)</em></li>
+            <li><span class="layer-legend__num">02</span> Grunt / primer</li>
+            <li><span class="layer-legend__num">03</span> Warstwa bazowa</li>
+            <li><span class="layer-legend__num">04</span> Mikrocement finiszowy</li>
+            <li><span class="layer-legend__num">05</span> Powłoka ochronna UV</li>
+          </ol>
+        </div>
       </div>
     </div>
   </section>
@@ -133,22 +161,22 @@
 
       <div class="why-grid reveal">
         <div class="why-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L2 21"/><path d="M14.5 6.5l3 3"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l3.5-1 11-11a2.1 2.1 0 0 0-3-3l-11 11L2 21"/><path d="M14.5 6.5l3 3"/></svg>
           <h3>Precyzja wykonania</h3>
           <p>Każda warstwa nakładana ręcznie, zgodnie z technologią producenta i parametrami wilgotności podłoża.</p>
         </div>
         <div class="why-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 8-7 9-4-1-7-4.5-7-9V6l7-3z"/></svg>
           <h3>Trwałość i gwarancja</h3>
           <p>Materiały klasy premium i pisemna gwarancja na wykonanie, bez drobnego druku.</p>
         </div>
         <div class="why-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M21 12h-2M5 12H3"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v2M12 19v2M21 12h-2M5 12H3"/></svg>
           <h3>Indywidualny projekt</h3>
           <p>Kolor, faktura i wykończenie dobrane do wnętrza, nie z gotowego katalogu, tylko pod Twoją przestrzeń.</p>
         </div>
         <div class="why-card">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
           <h3>Terminy bez niespodzianek</h3>
           <p>Harmonogram ustalany przed startem prac i aktualizowany na bieżąco, wiesz, na czym stoisz.</p>
         </div>
@@ -174,7 +202,7 @@
           <div class="product-card__body">
             <h3>Mikrocement - podłogi i ściany</h3>
             <p>Cienkowarstwowa, bezspoinowa wykładzina mineralna. Dowolny kolor, matowe lub półmatowe wykończenie.</p>
-            <a href="#kontakt" class="product-card__link">Zapytaj o wycenę <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="#kontakt" class="product-card__link">Zapytaj o wycenę <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
 
@@ -185,8 +213,8 @@
           </div>
           <div class="product-card__body">
             <h3>Posadzki żywiczne</h3>
-            <p>Wysoka odporność na ścieranie i chemię - do garaży, showroomów, lokali usługowych i przemysłu.</p>
-            <a href="#kontakt" class="product-card__link">Zapytaj o wycenę <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p>Wysoka odporność na ścieranie i chemię — do garaży, showroomów, lokali usługowych i przemysłu.</p>
+            <a href="#kontakt" class="product-card__link">Zapytaj o wycenę <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
 
@@ -197,8 +225,8 @@
           </div>
           <div class="product-card__body">
             <h3>Wykończenia dekoracyjne</h3>
-            <p>Efekty metaliczne, płatki barwne i wzory na indywidualne zamówienie - do wnętrz reprezentacyjnych.</p>
-            <a href="#kontakt" class="product-card__link">Zapytaj o wycenę <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <p>Efekty metaliczne, płatki barwne i wzory na indywidualne zamówienie — do wnętrz reprezentacyjnych.</p>
+            <a href="#kontakt" class="product-card__link">Zapytaj o wycenę <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
           </div>
         </article>
       </div>
@@ -257,15 +285,15 @@
         </div>
         <div class="coverage-cards">
           <div class="coverage-card">
-            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.5-7-11.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg> [Twoje miasto] i okolice</h3>
+            <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.5-7-11.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg> [Twoje miasto] i okolice</h3>
             <p>Regularnie realizujemy projekty w [Twoje miasto] oraz w promieniu ok. 50 km.</p>
           </div>
           <div class="coverage-card">
-            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg> Cała Polska</h3>
-            <p>Przy większych realizacjach dojeżdżamy na terenie całego kraju, warunki ustalamy indywidualnie.</p>
+            <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg> Cała Polska</h3>
+            <p>Przy większych realizacjach dojeżdżamy na terenie całego kraju — warunki ustalamy indywidualnie.</p>
           </div>
           <div class="coverage-card">
-            <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V4h8v3"/></svg> Showroom</h3>
+            <h3><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V4h8v3"/></svg> Showroom</h3>
             <p>Zobacz próbki na żywo pod adresem: <a href="#kontakt">ul. Przykładowa 1, 00-000 Miasto</a>. Wizyty po wcześniejszym umówieniu.</p>
           </div>
         </div>
@@ -284,11 +312,11 @@
       <div class="testimonials reveal">
         <div class="testimonial">
           <div class="testimonial__stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
           </div>
           <p>„Współpraca przebiegła bardzo profesjonalnie, ekipa dotrzymała terminu, a efekt przerósł nasze oczekiwania. Podłoga w salonie wygląda dokładnie tak, jak sobie wyobrażaliśmy."</p>
           <div class="testimonial__author">
@@ -299,11 +327,11 @@
 
         <div class="testimonial">
           <div class="testimonial__stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
           </div>
           <p>„Renowacja łazienki bez skuwania płytek, dokładnie to, czego szukaliśmy. Zero pyłu, praca skończona w trzy dni, efekt jak z katalogu."</p>
           <div class="testimonial__author">
@@ -314,11 +342,11 @@
 
         <div class="testimonial">
           <div class="testimonial__stars">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 7h7l-5.5 4.5L18.5 21 12 16.5 5.5 21 7.5 13.5 2 9h7z"/></svg>
           </div>
           <p>„Wybraliśmy posadzkę żywiczną do showroomu, po roku użytkowania powierzchnia wygląda jak nowa mimo dużego ruchu. Polecamy."</p>
           <div class="testimonial__author">
@@ -455,15 +483,15 @@
 
         <ul class="contact-list">
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.8 2.1z"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.8 2.1z"/></svg>
             +48 000 000 000
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 6 10-6"/></svg>
             kontakt@twojafirma.pl
           </li>
           <li>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.5-7-11.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.5-7-11.5A7 7 0 0 1 19 9.5C19 14.5 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
             ul. Przykładowa 1, 00-000 Miasto
           </li>
           <li>
@@ -473,11 +501,11 @@
         </ul>
 
         <div class="contact-social">
-          <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
           </a>
-          <a href="#" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9h3V5h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"/></svg>
+          <a href="#" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 9h3V5h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V9a1 1 0 0 1 1-1z"/></svg>
           </a>
         </div>
       </div>
@@ -486,17 +514,17 @@
         <div class="form-row">
           <div class="field">
             <label for="imie">Imię i nazwisko</label>
-            <input type="text" id="imie" name="imie" autocomplete="name" required>
+            <input type="text" id="imie" name="imie" autocomplete="name" maxlength="120" required>
           </div>
           <div class="field">
             <label for="telefon">Telefon</label>
-            <input type="tel" id="telefon" name="telefon" autocomplete="tel">
+            <input type="tel" id="telefon" name="telefon" autocomplete="tel" inputmode="tel" maxlength="40">
           </div>
         </div>
 
         <div class="field">
           <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" autocomplete="email" required>
+          <input type="email" id="email" name="email" autocomplete="email" inputmode="email" required>
         </div>
 
         <div class="field">
@@ -511,7 +539,7 @@
 
         <div class="field">
           <label for="wiadomosc">Wiadomość</label>
-          <textarea id="wiadomosc" name="wiadomosc" placeholder="Opisz krótko pomieszczenie, metraż i termin, który Cię interesuje." required></textarea>
+          <textarea id="wiadomosc" name="wiadomosc" placeholder="Opisz krótko pomieszczenie, metraż i termin, który Cię interesuje." maxlength="4000" required></textarea>
         </div>
 
         <!-- honeypot – pole niewidoczne dla użytkownika, wyłapuje boty -->
@@ -578,7 +606,7 @@
 </footer>
 
 <button class="to-top" id="toTop" aria-label="Wróć na górę strony">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
 </button>
 
 <script src="js/script.js"></script>
