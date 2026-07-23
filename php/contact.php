@@ -13,6 +13,8 @@ const NAZWA_FIRMY      = 'Nazwa Firmy';              // <-- nazwa wyświetlana w
 
 /* ------------------------------------------------------------------ */
 
+mb_internal_encoding('UTF-8');
+session_start();
 header('Content-Type: application/json; charset=utf-8');
 
 // Akceptujemy tylko żądania POST
@@ -23,7 +25,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 /* ---------- proste ograniczenie częstotliwości (1 wiadomość / 30 s / sesja) ---------- */
-session_start();
 $now = time();
 if (isset($_SESSION['last_contact_submit']) && ($now - $_SESSION['last_contact_submit']) < 30) {
     http_response_code(429);
@@ -67,6 +68,15 @@ if ($wiadomosc === '' || mb_strlen($wiadomosc) < 5) {
 if (mb_strlen($imie) > 120 || mb_strlen($wiadomosc) > 4000 || mb_strlen($telefon) > 40) {
     $bledy[] = 'Jedno z pól przekracza dozwoloną długość.';
 }
+if ($telefon !== '' && !preg_match('/^[0-9+\-\s()]{6,40}$/', $telefon)) {
+    $bledy[] = 'Numer telefonu zawiera niedozwolone znaki.';
+}
+
+// biała lista tematów — jeśli ktoś ominie <select> i wyśle własną wartość, wpadnie tutaj
+$dozwolone_tematy = ['Mikrocement', 'Posadzka żywiczna', 'Wykończenie dekoracyjne', 'Nie wiem — proszę o kontakt'];
+if (!in_array($temat, $dozwolone_tematy, true)) {
+    $temat = 'Nie wiem — proszę o kontakt';
+}
 
 if (!empty($bledy)) {
     http_response_code(422);
@@ -93,7 +103,8 @@ $temat_maila = '=?UTF-8?B?' . base64_encode('Nowe zapytanie ze strony — ' . NA
 
 // Nagłówki — From musi być adresem z Twojej domeny (wymóg wielu hostingów / SPF),
 // dlatego prawdziwy e-mail klienta ustawiamy jako Reply-To.
-$domenaNadawcy = 'no-reply@' . preg_replace('/^www\./', '', $_SERVER['HTTP_HOST'] ?? 'twojafirma.pl');
+$hostBezPortu = preg_replace('/:\d+$/', '', $_SERVER['HTTP_HOST'] ?? 'twojafirma.pl');
+$domenaNadawcy = 'no-reply@' . preg_replace('/^www\./', '', $hostBezPortu);
 
 $naglowki = [];
 $naglowki[] = 'MIME-Version: 1.0';

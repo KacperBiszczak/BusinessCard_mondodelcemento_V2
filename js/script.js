@@ -26,19 +26,42 @@
   /* ---------- nav: menu mobilne ---------- */
   var burger = document.getElementById("navBurger");
   var navLinks = document.getElementById("navLinks");
+  var navBackdrop = document.getElementById("navBackdrop");
+
+  var openMenu = function () {
+    nav.classList.add("is-open");
+    burger.setAttribute("aria-expanded", "true");
+    burger.setAttribute("aria-label", "Zamknij menu");
+    document.body.style.overflow = "hidden";
+  };
+
+  var closeMenu = function (returnFocus) {
+    nav.classList.remove("is-open");
+    burger.setAttribute("aria-expanded", "false");
+    burger.setAttribute("aria-label", "Otwórz menu");
+    document.body.style.overflow = "";
+    if (returnFocus) burger.focus();
+  };
+
   if (burger && navLinks) {
     burger.addEventListener("click", function () {
-      var isOpen = nav.classList.toggle("is-open");
-      burger.setAttribute("aria-expanded", isOpen ? "true" : "false");
-      burger.setAttribute("aria-label", isOpen ? "Zamknij menu" : "Otwórz menu");
-      document.body.style.overflow = isOpen ? "hidden" : "";
+      if (nav.classList.contains("is-open")) closeMenu(false);
+      else openMenu();
     });
     navLinks.querySelectorAll("a").forEach(function (a) {
       a.addEventListener("click", function () {
-        nav.classList.remove("is-open");
-        burger.setAttribute("aria-expanded", "false");
-        document.body.style.overflow = "";
+        closeMenu(false);
       });
+    });
+    if (navBackdrop) {
+      navBackdrop.addEventListener("click", function () {
+        closeMenu(false);
+      });
+    }
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("is-open")) {
+        closeMenu(true);
+      }
     });
   }
 
