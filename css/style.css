@@ -473,7 +473,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.1;lett
   font-size:.75rem;
   color:var(--stone-2);
   text-align:center;
-  padding:20px;
+  /* padding:20px; */
 }
 @media (max-width:640px){.coverage-map{min-height:220px;}}
 .coverage-cards{display:flex;flex-direction:column;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius-md);overflow:hidden;}

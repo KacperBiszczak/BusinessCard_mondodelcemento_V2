@@ -8,8 +8,8 @@
  * KONFIGURACJA — zmień tylko te dwie stałe poniżej:
  */
 
-const ODBIORCA_EMAIL   = 'kontakt@twojafirma.pl';   // <-- Twój adres, na który mają przychodzić zapytania
-const NAZWA_FIRMY      = 'Nazwa Firmy';              // <-- nazwa wyświetlana w temacie / treści maila
+const ODBIORCA_EMAIL   = 'biszczakkacper@gmail.com';   // <-- Twój adres, na który mają przychodzić zapytania
+const NAZWA_FIRMY      = 'Mondo Del Cemento';              // <-- nazwa wyświetlana w temacie / treści maila
 
 /* ------------------------------------------------------------------ */
 
@@ -72,10 +72,10 @@ if ($telefon !== '' && !preg_match('/^[0-9+\-\s()]{6,40}$/', $telefon)) {
     $bledy[] = 'Numer telefonu zawiera niedozwolone znaki.';
 }
 
-// biała lista tematów — jeśli ktoś ominie <select> i wyśle własną wartość, wpadnie tutaj
+// biała lista tematów - jeśli ktoś ominie <select> i wyśle własną wartość, wpadnie tutaj
 $dozwolone_tematy = ['Mikrocement', 'Posadzka żywiczna', 'Wykończenie dekoracyjne', 'Nie wiem — proszę o kontakt'];
 if (!in_array($temat, $dozwolone_tematy, true)) {
-    $temat = 'Nie wiem — proszę o kontakt';
+    $temat = 'Nie wiem - proszę o kontakt';
 }
 
 if (!empty($bledy)) {
