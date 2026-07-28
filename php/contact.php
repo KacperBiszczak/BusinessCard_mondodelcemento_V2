@@ -80,7 +80,7 @@ if ($telefon !== '' && !preg_match('/^[0-9+\-\s()]{6,40}$/', $telefon)) {
 }
 
 // biała lista tematów - jeśli ktoś ominie <select> i wyśle własną wartość, wpadnie tutaj
-$dozwolone_tematy = ['Mikrocement', 'Posadzka żywiczna', 'Wykończenie dekoracyjne', 'Nie wiem — proszę o kontakt'];
+$dozwolone_tematy = ['Mikrocement', 'Posadzka żywiczna', 'Wykończenie dekoracyjne', 'Nie wiem, proszę o kontakt'];
 if (!in_array($temat, $dozwolone_tematy, true)) {
     $temat = 'Nie wiem - proszę o kontakt';
 }
@@ -143,7 +143,7 @@ if ($wyslano) {
     $_SESSION['last_contact_submit'] = $now;
     echo json_encode([
         'success' => true,
-        'message' => 'Dziękujemy! Wiadomość została wysłana — odezwiemy się wkrótce.',
+        'message' => 'Dziękujemy! Wiadomość została wysłana, odezwiemy się wkrótce.',
     ]);
 } else {
     http_response_code(500);
