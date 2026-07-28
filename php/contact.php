@@ -5,11 +5,18 @@
  * Wysyła wiadomość e-mail funkcją mail() PHP (działa na większości
  * hostingów współdzielonych, np. home.pl, nazwa.pl, cyberfolks, OVH).
  *
- * KONFIGURACJA — zmień tylko te dwie stałe poniżej:
+ * KONFIGURACJA — zmień tylko te stałe poniżej:
  */
 
 const ODBIORCA_EMAIL   = 'biszczakkacper@gmail.com';   // <-- Twój adres, na który mają przychodzić zapytania
 const NAZWA_FIRMY      = 'Mondo Del Cemento';              // <-- nazwa wyświetlana w temacie / treści maila
+
+// UWAGA: przed wgraniem na docelowy hosting ustaw na false!
+// W trybie testowym (true) mail() NIE jest wywoływane — treść
+// wiadomości jest zamiast tego zapisywana do pliku php/test-mail.log,
+// żeby dało się przetestować formularz lokalnie na XAMPP bez
+// skonfigurowanego serwera pocztowego.
+const TRYB_TESTOWY = false;
 
 /* ------------------------------------------------------------------ */
 
@@ -113,12 +120,24 @@ $naglowki[] = 'From: ' . NAZWA_FIRMY . ' <' . $domenaNadawcy . '>';
 $naglowki[] = 'Reply-To: ' . $imie . ' <' . $email . '>';
 $naglowki[] = 'X-Mailer: PHP/' . phpversion();
 
-$wyslano = @mail(
-    ODBIORCA_EMAIL,
-    $temat_maila,
-    $tresc,
-    implode("\r\n", $naglowki)
-);
+if (TRYB_TESTOWY) {
+    // ---- TRYB TESTOWY: nie wysyłamy maila, tylko zapisujemy do pliku ----
+    $logWpis = "===== " . $dataWyslania . " =====\n";
+    $logWpis .= "Do: " . ODBIORCA_EMAIL . "\n";
+    $logWpis .= "Temat: Nowe zapytanie ze strony — " . NAZWA_FIRMY . "\n";
+    $logWpis .= implode("\r\n", $naglowki) . "\n\n";
+    $logWpis .= $tresc . "\n\n";
+
+    $wyslano = @file_put_contents(__DIR__ . '/test-mail.log', $logWpis, FILE_APPEND | LOCK_EX);
+    $wyslano = ($wyslano !== false);
+} else {
+    $wyslano = @mail(
+        ODBIORCA_EMAIL,
+        $temat_maila,
+        $tresc,
+        implode("\r\n", $naglowki)
+    );
+}
 
 if ($wyslano) {
     $_SESSION['last_contact_submit'] = $now;
@@ -133,3 +152,4 @@ if ($wyslano) {
         'message' => 'Nie udało się wysłać wiadomości. Spróbuj ponownie lub zadzwoń bezpośrednio.',
     ]);
 }
+?>

@@ -162,7 +162,7 @@
 
       var formData = new FormData(form);
 
-      fetch("php/contact.php", {
+      fetch("http://localhost/php/contact.php", {
         method: "POST",
         body: formData,
         headers: { "X-Requested-With": "XMLHttpRequest" },
