@@ -284,7 +284,7 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.1;lett
 .hero__stats{
   margin-top:56px;
   display:grid;
-  grid-template-columns:repeat(3,auto);
+  grid-template-columns:repeat(2,auto);
   gap:40px;
   border-top:1px solid var(--line);
   padding-top:32px;
@@ -317,7 +317,17 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.1;lett
   object-fit:cover;
   display:block;
 }
-@media (max-width:640px){.hero-visual__photo{aspect-ratio:16/7;}}
+@media (max-width:640px){
+  .hero-visual__photo{aspect-ratio:16/7;}
+  .hero__stats{
+  margin-top:56px;
+  display:grid;
+  grid-template-columns:repeat(2,auto);
+  gap:40px;
+  border-top:1px solid var(--line);
+  padding-top:32px;
+}
+}
 
 .layer-diagram{position:relative;}
 .layer-diagram svg{width:100%;height:auto;display:block;}

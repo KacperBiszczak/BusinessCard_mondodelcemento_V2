@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Polityka prywatności - Mondo Del Cemento</title>
+<meta name="description" content="Polityka prywatności NAZWA FIRMY - mikrocement i posadzki żywiczne.">
+<meta name="robots" content="noindex, follow">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --basalt:#221F1C;
+    --sand:#EDE6D8;
+    --resin:#8C6329;
+    --resin-light:#D9AE72;
+    --sand-line:rgba(34,31,28,0.12);
+    --font-display:'Space Grotesk', sans-serif;
+    --font-body:'Inter', sans-serif;
+    --font-mono:'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--font-body);
+    background:var(--sand);
+    color:var(--basalt);
+    line-height:1.65;
+    font-size:16px;
+  }
+  a{color:var(--resin); text-decoration:none;}
+  /* a:hover{text-decoration:underline;} */
+  a:focus-visible, button:focus-visible{outline:2px solid var(--resin); outline-offset:2px;}
+
+  header.site{
+    position:sticky; top:0; z-index:50;
+    background:rgba(237,230,216,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--sand-line);
+  }
+  .header-inner{
+    max-width:1120px; margin:0 auto; padding:18px 24px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{
+    font-family:var(--font-display); font-weight:700; font-size:1.15rem;
+    letter-spacing:0.02em; color:var(--basalt);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo span{color:var(--resin);}
+  nav.crumbs{font-family:var(--font-mono); font-size:0.8rem; color:rgba(34,31,28,0.6);}
+  nav.crumbs a{color:rgba(34,31,28,0.6);}
+  nav.crumbs a:hover{color:var(--resin);}
+
+  main{max-width:760px; margin:0 auto; padding:64px 24px 96px;}
+
+  .eyebrow{
+    font-family:var(--font-mono); font-size:0.78rem; letter-spacing:0.12em;
+    text-transform:uppercase; color:var(--resin); margin-bottom:14px;
+  }
+  h1{
+    font-family:var(--font-display); font-weight:700;
+    font-size:clamp(1.9rem, 4vw, 2.6rem); line-height:1.15;
+    margin-bottom:10px;
+  }
+  .updated{
+    font-family:var(--font-mono); font-size:0.82rem; color:rgba(34,31,28,0.55);
+    margin-bottom:48px;
+  }
+
+  section{margin-bottom:40px;}
+  h2{
+    font-family:var(--font-display); font-weight:600; font-size:1.25rem;
+    color:var(--basalt); margin-bottom:14px; padding-bottom:10px;
+    border-bottom:1px solid var(--sand-line);
+    display:flex; align-items:baseline; gap:10px;
+  }
+  h2 .num{font-family:var(--font-mono); font-size:0.85rem; color:var(--resin); font-weight:500;}
+  h3{font-family:var(--font-display); font-weight:600; font-size:1rem; margin:20px 0 8px;}
+  p{margin-bottom:12px; color:rgba(34,31,28,0.88);}
+  ul, ol{margin:0 0 12px 22px; color:rgba(34,31,28,0.88);}
+  li{margin-bottom:6px;}
+  strong{font-weight:600; color:var(--basalt);}
+
+  .fill{
+    background:rgba(140,99,41,0.12);
+    color:var(--resin);
+    padding:1px 5px;
+    border-radius:3px;
+    font-family:var(--font-mono);
+    font-size:0.92em;
+  }
+
+  table{
+    width:100%; border-collapse:collapse; margin:16px 0 20px;
+    font-size:0.92rem;
+  }
+  th, td{
+    text-align:left; padding:10px 12px;
+    border:1px solid var(--sand-line);
+    vertical-align:top;
+  }
+  th{
+    font-family:var(--font-mono); font-weight:500; font-size:0.78rem;
+    text-transform:uppercase; letter-spacing:0.04em;
+    background:rgba(140,99,41,0.06); color:var(--resin);
+  }
+
+  .note{
+    border-left:3px solid var(--resin-light);
+    background:rgba(217,174,114,0.12);
+    padding:14px 18px;
+    font-size:0.92rem;
+    border-radius:0 6px 6px 0;
+  }
+
+  footer.site{
+    border-top:1px solid var(--sand-line);
+    padding:32px 24px;
+    text-align:center;
+    font-family:var(--font-mono);
+    font-size:0.8rem;
+    color:rgba(34,31,28,0.55);
+  }
+
+  @media (max-width:640px){
+    main{padding:40px 20px 72px;}
+    h2{font-size:1.1rem;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="header-inner">
+    <a href="/index.html"><div class="logo"><img src="img/logo.svg" alt="Nazwa Firmy" class="logo-slot__img" style="width: 48px;">Mondo Del Cemento</div></a>
+    <nav class="crumbs"><a href="index.html">Strona główna</a> / Polityka prywatności</nav>
+  </div>
+</header>
+
+<main>
+  <div class="eyebrow">Ochrona danych osobowych</div>
+  <h1>Polityka prywatności</h1>
+  <p class="updated">Ostatnia aktualizacja: <span class="fill">29.07.2026</span></p>
+
+  <section>
+    <h2><span class="num">01</span>Administrator danych osobowych</h2>
+    <p>Administratorem danych osobowych zbieranych za pośrednictwem strony internetowej <span class="fill">www.twojafirma.pl</span> jest:</p>
+    <p>
+      <strong class="fill">Mondo Del Cemento</strong><br>
+      <span class="fill">Zubrzyca Górna 514, 34-484 Zubrzyca Górna</span><br>
+      NIP: <span class="fill">735-293-25-16</span><br>
+      E-mail: <a href="mailto:mondodelcemento@interia.pl" class="fill">mondodelcemento@interia.pl</a><br>
+      Telefon: <span class="fill">+48 794 755 650</span>
+    </p>
+    <p>zwana dalej „Administratorem”.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">02</span>Jakie dane zbieramy</h2>
+    <p>Dane osobowe są zbierane wyłącznie w zakresie niezbędnym do obsługi zapytań przesyłanych przez formularz kontaktowy dostępny na stronie. Formularz może obejmować następujące dane:</p>
+    <ul>
+      <li>imię i nazwisko,</li>
+      <li>adres e-mail,</li>
+      <li>numer telefonu,</li>
+      <li>treść wiadomości / opis zapytania (np. rodzaj posadzki, metraż, lokalizacja realizacji).</li>
+    </ul>
+    <p>Strona nie wymaga zakładania konta użytkownika i nie umożliwia dokonywania zakupów online.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">03</span>Cel i podstawa prawna przetwarzania</h2>
+    <table>
+      <thead>
+        <tr><th>Cel przetwarzania</th><th>Podstawa prawna (RODO)</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Udzielenie odpowiedzi na zapytanie przesłane przez formularz kontaktowy, w tym przygotowanie wyceny</td>
+          <td>Art. 6 ust. 1 lit. b - działania przed zawarciem umowy, podejmowane na żądanie osoby, której dane dotyczą</td>
+        </tr>
+        <tr>
+          <td>Ewentualny kontakt marketingowy dotyczący oferty (wyłącznie za zgodą)</td>
+          <td>Art. 6 ust. 1 lit. a - zgoda osoby, której dane dotyczą</td>
+        </tr>
+        <tr>
+          <td>Ustalenie, dochodzenie lub obrona przed roszczeniami</td>
+          <td>Art. 6 ust. 1 lit. f - prawnie uzasadniony interes Administratora</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2><span class="num">04</span>Okres przechowywania danych</h2>
+    <p>Dane osobowe przekazane w formularzu kontaktowym przechowywane są przez okres niezbędny do udzielenia odpowiedzi oraz realizacji ewentualnej współpracy, a po jej zakończeniu - przez okres przedawnienia roszczeń wynikający z przepisów prawa (co do zasady <span class="fill">6 lat</span>, a w przypadku roszczeń związanych z działalnością gospodarczą - <span class="fill">3 lata</span>). Dane przetwarzane na podstawie zgody są usuwane niezwłocznie po jej wycofaniu.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">05</span>Odbiorcy danych</h2>
+    <p>Dane osobowe mogą być przekazywane podmiotom wspierającym Administratora w prowadzeniu działalności, w szczególności:</p>
+    <ul>
+      <li>dostawcy usług hostingowych, na których serwerach utrzymywana jesWt strona i skrzynka pocztowa (np. <span class="fill">home.pl / nazwa.pl / [nazwa dostawcy]</span>),</li>
+      <li>dostawcy poczty elektronicznej wykorzystywanej do obsługi korespondencji,</li>
+      <li>podmioty świadczące usługi księgowe lub prawne, o ile jest to niezbędne.</li>
+    </ul>
+    <p>Dane nie są przekazywane do państw trzecich ani udostępniane w celach marketingowych podmiotom zewnętrznym bez odrębnej zgody.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">06</span>Prawa osoby, której dane dotyczą</h2>
+    <p>Osobie, której dane dotyczą, przysługuje prawo do:</p>
+    <ul>
+      <li>dostępu do swoich danych oraz otrzymania ich kopii,</li>
+      <li>sprostowania (poprawiania) danych,</li>
+      <li>usunięcia danych („prawo do bycia zapomnianym”),</li>
+      <li>ograniczenia przetwarzania danych,</li>
+      <li>wniesienia sprzeciwu wobec przetwarzania,</li>
+      <li>przenoszenia danych,</li>
+      <li>cofnięcia zgody w dowolnym momencie, bez wpływu na zgodność z prawem przetwarzania dokonanego przed jej cofnięciem,</li>
+      <li>wniesienia skargi do Prezesa Urzędu Ochrony Danych Osobowych (ul. Stawki 2, 00-193 Warszawa), jeśli uzna, że przetwarzanie narusza przepisy RODO.</li>
+    </ul>
+    <p>W celu realizacji powyższych praw należy skontaktować się z Administratorem pod adresem <a href="mailto:mondodelcemento@interia.pl" class="fill">mondodelcemento@interia.pl</a>.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">07</span>Pliki cookies</h2>
+    <p>Strona może wykorzystywać pliki cookies oraz podobne technologie w celu:</p>
+    <ul>
+      <li>zapewnienia prawidłowego działania strony (cookies niezbędne),</li>
+      <li>ładowania czcionek za pośrednictwem Google Fonts,</li>
+    </ul>
+    <p>Użytkownik może w każdej chwili zmienić ustawienia dotyczące plików cookies w swojej przeglądarce internetowej, w tym zablokować ich zapisywanie. Ograniczenie stosowania cookies może wpłynąć na niektóre funkcjonalności strony.</p>
+  </section>
+
+  <section>
+    <h2><span class="num">08</span>Bezpieczeństwo danych</h2>
+    <p>Administrator stosuje odpowiednie środki techniczne i organizacyjne zapewniające ochronę przetwarzanych danych osobowych, w tym zabezpieczenie formularza kontaktowego przed nieuprawnionym dostępem, w tym przed spamem i automatycznymi zgłoszeniami (mechanizm honeypot, ograniczenie liczby zgłoszeń, walidacja danych po stronie serwera).</p>
+  </section>
+
+  <section>
+    <h2><span class="num">09</span>Zmiany polityki prywatności</h2>
+    <p>Administrator zastrzega sobie prawo do wprowadzania zmian w niniejszej Polityce prywatności. Aktualna wersja dokumentu jest zawsze dostępna na tej podstronie, wraz z datą ostatniej aktualizacji widoczną powyżej.</p>
+  </section>
+
+  <!-- <div class="note">
+    Ten dokument ma charakter wzoru i wymaga uzupełnienia danych firmy oraz weryfikacji zgodności z faktycznym zakresem przetwarzania danych (np. jeśli dodasz Google Analytics, newsletter lub płatności online, dokument trzeba rozszerzyć).
+  </div> -->
+</main>
+
+<footer class="site">
+  © <span class="fill">2026</span> Mondo Del Cemento - wszelkie prawa zastrzeżone
+</footer>
+
+</body>
+</html>

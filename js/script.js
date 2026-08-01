@@ -199,4 +199,23 @@
         });
     });
   }
+
+  // HeroStats changes
+  let time = new Date();
+
+  // Previous year
+  const prevYearBox = document.querySelector("#prevYear");
+  const actYear = time.toLocaleDateString('pl-PL', {year:"numeric"});
+  let previousYear = actYear-1;
+  prevYearBox.innerText = `${previousYear}`;
+
+  //How much experience
+  const experienceYearBox = document.querySelector("#experienceYears");
+  
+  let year = 2014;
+  let experienceYears = new Date().getFullYear() - year;
+  experienceYearBox.innerText = `${experienceYears} lat`;
+
+
+
 })();
