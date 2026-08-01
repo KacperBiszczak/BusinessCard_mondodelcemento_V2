@@ -112,7 +112,7 @@
 
     btn.addEventListener("click", function () {
       var open = !item.classList.contains("is-open");
-      // zamknij pozostałe (opcjonalnie — jeden otwarty naraz)
+      // zamknij pozostałe (opcjonalnie, jeden otwarty naraz)
       faqItems.forEach(function (other) {
         if (other !== item) {
           other.classList.remove("is-open");
@@ -143,7 +143,7 @@
     form.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // honeypot — jeśli wypełnione, prawdopodobnie bot: ignorujemy cicho
+      // honeypot, jeśli wypełnione, prawdopodobnie bot: ignorujemy cicho
       var hp = form.querySelector("#website");
       if (hp && hp.value) {
         showStatus("Dziękujemy! Wiadomość została wysłana.", true);

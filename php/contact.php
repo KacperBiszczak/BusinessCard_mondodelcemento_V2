@@ -1,14 +1,6 @@
 <?php
-/**
- * contact.php
- * Prosty, bezzależnościowy handler formularza kontaktowego.
- * Wysyła wiadomość e-mail funkcją mail() PHP (działa na większości
- * hostingów współdzielonych, np. home.pl, nazwa.pl, cyberfolks, OVH).
- *
- * KONFIGURACJA — zmień tylko te stałe poniżej:
- */
 
-const ODBIORCA_EMAIL   = 'biszczakkacper@gmail.com';   // <-- Twój adres, na który mają przychodzić zapytania
+const ODBIORCA_EMAIL   = 'mondodelcemento@interia.pl';   // <-- Twój adres, na który mają przychodzić zapytania
 const NAZWA_FIRMY      = 'Mondo Del Cemento';              // <-- nazwa wyświetlana w temacie / treści maila
 
 // UWAGA: przed wgraniem na docelowy hosting ustaw na false!
@@ -41,7 +33,7 @@ if (isset($_SESSION['last_contact_submit']) && ($now - $_SESSION['last_contact_s
 
 /* ---------- honeypot: pole "website" powinno być puste ---------- */
 if (!empty($_POST['website'])) {
-    // Prawdopodobny bot — udajemy sukces, nic nie wysyłamy.
+    // Prawdopodobny bot, udajemy sukces, nic nie wysyłamy.
     echo json_encode(['success' => true, 'message' => 'Dziękujemy! Wiadomość została wysłana.']);
     exit;
 }
@@ -79,7 +71,7 @@ if ($telefon !== '' && !preg_match('/^[0-9+\-\s()]{6,40}$/', $telefon)) {
     $bledy[] = 'Numer telefonu zawiera niedozwolone znaki.';
 }
 
-// biała lista tematów - jeśli ktoś ominie <select> i wyśle własną wartość, wpadnie tutaj
+// biała lista tematów, jeśli ktoś ominie <select> i wyśle własną wartość, wpadnie tutaj
 $dozwolone_tematy = ['Mikrocement', 'Posadzka żywiczna', 'Wykończenie dekoracyjne', 'Nie wiem, proszę o kontakt'];
 if (!in_array($temat, $dozwolone_tematy, true)) {
     $temat = 'Nie wiem - proszę o kontakt';

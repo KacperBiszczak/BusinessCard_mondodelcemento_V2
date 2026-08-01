@@ -1,8 +1,3 @@
-/* =========================================================
-   NAZWA FIRMY — Mikrocement i posadzki żywiczne
-   Design system: beton / mikrocement / żywica
-   ========================================================= */
-
 :root{
   /* --- kolory --- */
   --basalt:      #221F1C;
@@ -68,7 +63,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.1;lett
 .section--dark{background:var(--basalt);color:var(--sand);}
 .section--sand{background:var(--sand-2);}
 
-/* tekstura mikrocementu w tle ciemnych sekcji */
 .section--dark{
   position:relative;
   background-image:
@@ -301,7 +295,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.1;lett
   color:var(--ink-soft);
 }
 
-/* --- wizualizacja hero: zdjęcie + diagram przekroju warstw (element sygnaturowy) --- */
 .hero-visual{display:flex;flex-direction:column;gap:20px;}
 
 .hero-visual__photo{
@@ -346,7 +339,6 @@ h1,h2,h3,h4{font-family:var(--font-display);font-weight:600;line-height:1.1;lett
 }
 .layer-diagram .layer-num{font-family:var(--font-mono);font-size:13px;font-weight:500;}
 
-/* legenda jako prawdziwy, skalowalny tekst HTML — czytelna na każdej szerokości ekranu */
 .layer-legend{
   display:flex;
   flex-direction:column;
