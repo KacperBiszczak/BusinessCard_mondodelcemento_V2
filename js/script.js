@@ -212,7 +212,7 @@
   //How much experience
   const experienceYearBox = document.querySelector("#experienceYears");
   
-  let year = 2014;
+  let year = 2016;
   let experienceYears = new Date().getFullYear() - year;
   experienceYearBox.innerText = `${experienceYears} lat`;
 
