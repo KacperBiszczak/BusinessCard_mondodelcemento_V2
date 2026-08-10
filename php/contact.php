@@ -98,7 +98,7 @@ $tresc .= "IP:              {$ip}\n";
 $tresc .= "----------------------------------------\n\n";
 $tresc .= "Treść wiadomości:\n{$wiadomosc}\n";
 
-$temat_maila = '=?UTF-8?B?' . base64_encode('Nowe zapytanie ze strony — ' . NAZWA_FIRMY) . '?=';
+$temat_maila = '=?UTF-8?B?' . base64_encode('Nowe zapytanie ze strony - ' . NAZWA_FIRMY) . '?=';
 
 // Nagłówki — From musi być adresem z Twojej domeny (wymóg wielu hostingów / SPF),
 // dlatego prawdziwy e-mail klienta ustawiamy jako Reply-To.
@@ -108,7 +108,7 @@ $domenaNadawcy = 'no-reply@' . preg_replace('/^www\./', '', $hostBezPortu);
 $naglowki = [];
 $naglowki[] = 'MIME-Version: 1.0';
 $naglowki[] = 'Content-Type: text/plain; charset=UTF-8';
-$naglowki[] = 'From: ' . NAZWA_FIRMY . ' <' . $domenaNadawcy . '>';
+$naglowki[] = 'From: ' . 'no-reply'. rand(10000,99999) .'@mondodelcemento.pl';
 $naglowki[] = 'Reply-To: ' . $imie . ' <' . $email . '>';
 $naglowki[] = 'X-Mailer: PHP/' . phpversion();
 
